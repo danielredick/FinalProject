@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!--Daniel Redick, CS81, Final Project-->
+
+
+<html>
+	<head>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<style>
+			* {
+				font-family: arial;
+				}
+			body {
+				background-color: lightgrey;
+				position: relative;
+				width: 70%;
+				border: 2em solid green;
+				padding: 2em;
+				margin: 2em;
+				}
+			h1	{
+				text-align: center;
+				}
+			#sub-title	{
+				text-align: center;
+				}
+			.infobtn {
+				background-color: lightgrey;
+				color: white;
+				padding: none;
+				font-size: 1em;
+				border: none;
+				cursor: pointer;
+				width: 1em;
+				text-align: center;
+				}
+			#.infobtn:hover, #.infobtn:focus {
+				background-color: #grey;
+				}
+			.material-icons {
+				font-size: 0.8em;
+				text-shadow:2px 2px 4px #000000;
+				}
+			<!--.txtGardenArea {
+				rows: 2;
+				cols: 3;
+				height: 2em;
+				width: 5em;
+				}-->
+			textarea {
+				position: absolute;
+				right: 1em;
+				font-size: 2em;
+				height: 1em;
+				width: 40%;
+				text-align: center;
+				border: 1px #FE9A2E;
+				}
+			#mulch {
+				font-size: 2em;
+				background-color: white;
+				position: absolute;
+				width: 40%;
+				height: 3em;
+				border: 1px solid green;
+				padding: 0em;
+				margin: 0em;
+				right: 1em;}
+			#volumeType {
+				background-color: #FE9A2E;
+				color: white;
+				padding: 1em;
+				font-size: 1em;
+				border: none;
+				cursor: pointer;
+				text-align: center;
+				}
+			<!--#volForm {
+				postion: absolute;
+				right: 1em;
+				width: 80%;
+				}-->
+			#volumeType:hover, #volumeType:focus {
+				background-color: #FF8000;
+				}
+			option {
+				color: black;
+				<!--padding: 12px 16px;
+				text-decoration: none;
+				display: block;-->
+				}
+			#dumptruck {
+				background:#98bf21;
+				height:100px;
+				width:100px;
+				position:relative;
+				}
+			.btn {
+				background-color: #4CAF50;
+				color: white;
+				padding: 1.2em;
+				font-size: 1.2em;
+				border: none;
+				cursor: pointer;
+				text-align: center;
+				}
+			.btn:hover, .dropbtn:focus {
+				background-color: #3e8e41;
+				}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+		</script>
+		<script src="C:\Users\Toshiba\Documents\CS81\Redick_CS81_FinalProject\Redick_CS81_FinalProject_Script_2.js">
+		</script>
+	</head>
+	<body>
+		<h1>Mulch Calculator</h1>
+		<h3 id="sub-title">How Much Mulch do you Need?</h3>
+		<h3>Garden Area (Sq. Ft):
+			<button type="button" class="infobtn" onclick="infoArea()">
+				<i class="material-icons">info outline</i>
+			</button>
+			<textarea id="txtGardenArea">10</textarea>
+		</h3>
+		<br>
+		<h3>Unit of Volume:
+			<form id="volForm">
+				<select id="volumeType">
+					<option>Cubic Feet</option>
+					<option>Bag (2 cubic ft)</option>
+					<option>Cubic Yards</option>
+					<option>Pick-Up Truck Loads</option>
+					<option>Dump Truck Loads</option>
+				</select>
+			</form>
+		</h3>
+		<br>
+		<img src="dumptruck.jpg" id="dumptruck" alt="dump truck"></img>
+		<br><br>
+		<p id="area"></p>
+		<div>
+			<input type="button" id="btnMulch" class="btn" onclick="calcMulch()" value="How Much Mulch?">
+			<button type="button" class="infobtn" onclick="infoAssumptions()">
+				<i class="material-icons">info outline</i>
+			</button>			
+			<a id="mulch"></a>
+		</div>
+	</body>
+</html>
